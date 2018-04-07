@@ -25,7 +25,8 @@ public class FoodRepositoryTest {
 
     @Test
     public void testFindAll(){
-//        Food food = testEntityManager.persistFlushFind(new Food(null, "Rice", "White Rice"));
+        Food food = testEntityManager.persistFlushFind(new Food(null, "Rice", "White Rice"));
+        assertThat(food).isNotNull();
         List<Food> foods = foodRepository.findAll();
         assertThat(foods.size()).isEqualTo(1);
         assertThat(foods.get(0).getName()).isEqualTo("Rice");

@@ -13,10 +13,10 @@ public class FoodServerApplication {
 	}
 
 	//init data
-	@Bean
-	ApplicationRunner applicationRunner(FoodRepository foodRepository){
-		return args -> {
-			foodRepository.save(new Food(null, "Rice", "White Rice"));
-		};
-	}
+//	@Bean
+//	ApplicationRunner applicationRunner(FoodRepository foodRepository){
+//		return args -> {
+//			foodRepository.save(new Food(null, "Rice", "White Rice"));
+//		};
+//	}
 }
