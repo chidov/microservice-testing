@@ -2,47 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c54e8053-8ed5-455d-9899-4fc6e7734704" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/microservice-testing.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/build.gradle" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/gradle/wrapper/gradle-wrapper.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/gradle/wrapper/gradle-wrapper.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/gradlew" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/gradlew.bat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/out/production/resources/application.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/settings.gradle" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/src/main/java/com/egen/foodclient/Food.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/src/main/java/com/egen/foodclient/FoodClient.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/src/main/java/com/egen/foodclient/FoodClientApplication.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/src/main/resources/application.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/src/test/java/com/egen/foodclient/FoodClientApplicationTests.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-client/src/test/java/com/egen/foodclient/FoodClientTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/build.gradle" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/gradle/wrapper/gradle-wrapper.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/gradle/wrapper/gradle-wrapper.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/gradlew" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/gradlew.bat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/out/production/resources/application.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/out/test/resources/contracts/shoudGetAllFoods.groovy" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/readme.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/settings.gradle" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/src/main/java/com/egen/foodserver/Food.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/src/main/java/com/egen/foodserver/FoodController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/src/main/java/com/egen/foodserver/FoodRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/src/main/java/com/egen/foodserver/FoodServerApplication.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/src/main/resources/application.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/src/test/java/com/egen/foodserver/FoodControllerTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/src/test/java/com/egen/foodserver/FoodEntityTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/src/test/java/com/egen/foodserver/FoodRepositoryTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/src/test/java/com/egen/foodserver/FoodServerApplicationTests.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/src/test/java/com/egen/foodserver/verified/base/FoodBase.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/food-server/src/test/resources/contracts/food/shoudGetAllFoods.groovy" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/food-client/.gitignore" afterPath="$PROJECT_DIR$/food-client/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/food-server/.gitignore" afterPath="$PROJECT_DIR$/food-server/.gitignore" />
     </list>
     <ignored path="$PROJECT_DIR$/food-client/.gradle/" />
     <ignored path="$PROJECT_DIR$/food-client/build/" />
@@ -104,8 +67,18 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food-client/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+            <state relative-caret-position="225">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -121,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food-server/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -461,46 +434,6 @@
               <item name="microservice-testing" type="462c0819:PsiDirectoryNode" />
               <item name="food-server" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="microservice-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="microservice-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="food-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="microservice-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="microservice-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="food-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="microservice-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="microservice-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="food-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="microservice-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="microservice-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="food-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="contracts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="microservice-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="microservice-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="food-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="contracts" type="462c0819:PsiDirectoryNode" />
-              <item name="food" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -519,6 +452,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.234375" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -633,12 +571,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523082709438</updated>
-      <workItem from="1523082710708" duration="1459000" />
+      <workItem from="1523082710708" duration="1628000" />
     </task>
+    <task id="LOCAL-00001" summary="git init">
+      <created>1523084391897</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1523084391897</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1459000" />
+    <option name="totallyTimeSpent" value="1628000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="823" extended-state="6" />
@@ -656,15 +611,16 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -674,7 +630,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -684,6 +639,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="git init" />
+    <option name="LAST_COMMIT_MESSAGE" value="git init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -762,14 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food-client/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/food-server/src/test/resources/contracts/food/shoudGetAllFoods.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -781,7 +732,23 @@
     <entry file="file://$PROJECT_DIR$/food-server/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food-client/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding />
         </state>
       </provider>
