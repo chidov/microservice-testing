@@ -1,9 +1,5 @@
 group 'com.egen'
 
-plugins {
-    id "org.sonarqube" version "2.6"
-}
-
 subprojects {
     apply plugin: 'java'
 
