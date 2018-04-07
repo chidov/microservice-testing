@@ -1,0 +1,79 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.1.RELEASE'
+		springCloudContractVersion = '1.2.4.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath "org.springframework.cloud:spring-cloud-contract-gradle-plugin:${springCloudContractVersion}"
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'spring-cloud-contract'
+apply plugin: 'maven-publish'
+
+group = 'com.egen'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+	maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
+}
+
+
+ext {
+	springCloudVersion = 'Finchley.BUILD-SNAPSHOT'
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	runtime('com.h2database:h2')
+	compileOnly('org.projectlombok:lombok')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('org.springframework.cloud:spring-cloud-starter-contract-verifier')
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+contracts {
+//    Class Base
+//    baseClassForTests = 'com.egen.foodserver.verified.base.FoodBase'
+//    Package Base with Convention ( (src/test/resources/contracts/**)last at most 2 package name + Suffix 'Base', in our case will be FoodBase)
+    packageWithBaseClasses = 'com.egen.foodserver.verified.base'
+	basePackageForTests = 'com.egen.foodserver.verifier.tests'
+}
+
+test {
+	exclude 'com/egen/foodserver/verified/**'
+}
+
+publishing {
+//	repositories {
+//		maven {
+//			url "${artifactoryURL}/dev-artifacts"
+//			credentials {
+//				username = "${project.getProperty('ivy.user')}"
+//				password = "${project.getProperty('ivy.passwd')}"
+//			}
+//		}
+//	}
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+		}
+	}
+}
