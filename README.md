@@ -118,6 +118,10 @@ public class FoodClientTest {
 ```
 ./gradlew publishStubsPublicationToMavenLocal
 ```
+### Technology Stacks
+* WireMock : Spring Cloud Contract Stub Runner use **WireMock** to run the Mock Server which inject the stub(`stubs/mappings/*.json`) from the stub artifact into it.
+* RestAssured: Spring Cloud Contract Verifier use **RestAssured** as MockMvc test engine for auto-generated boilerplate test code.
+
 ## Reference
 https://cloud.spring.io/spring-cloud-contract/  
 https://cloud.spring.io/spring-cloud-static/spring-cloud-contract/1.2.1.RELEASE/single/spring-cloud-contract.html#_spring_cloud_contract  
