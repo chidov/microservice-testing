@@ -14,6 +14,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Arrays;
 
+import static org.mockito.BDDMockito.given;
+
 /**
  * @author cdov
  */
@@ -29,9 +31,17 @@ public class FoodBase {
 
     @Before
     public void setup() {
-        Mockito.when(this.foodRepository.findAll())
-                .thenReturn(Arrays.asList(new Food(1L, "Rice", "White Rice"), new Food(2L, "Fried Rice", "Premium Rice")));
+        mockFoodRepositoryFindAll();
         RestAssuredMockMvc.standaloneSetup(foodController);
+    }
+
+    private void mockFoodRepositoryFindAll(){
+        given(this.foodRepository.findAll())
+                .willReturn(Arrays.asList(
+                        new Food(1L, "Rice", "White Rice"),
+                        new Food(2L, "Fried Rice", "Premium Rice")
+                        )
+                );
     }
 
 }
