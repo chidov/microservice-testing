@@ -84,7 +84,7 @@ public class FoodTest extends FoodBase {
 ```
 
 ### Client Side test stub using Spring Cloud Contract Stub Runner
-Spring Cloud Contract generates stubs, which you can use during client-side testing. You get a running WireMock instance/Messaging route that simulates the service. In here the StubRunner will base on the groupd id to retrieve the artifact from your local maven repo since we define `stubsMode = StubRunnerProperties.StubsMode.LOCAL`
+Spring Cloud Contract generates stubs, which you can use during client-side testing. You get a running WireMock instance/Messaging route that simulates the service. In here the StubRunner will base on the groupd id to retrieve the stub artifact (`food-server-0.0.1-SNAPSHOT-stubs.jar`) from your local maven repo since we define `stubsMode = StubRunnerProperties.StubsMode.LOCAL`
 ```java
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -107,7 +107,14 @@ public class FoodClientTest {
 }
 ```
 ### Summary Spring Cloud Contract Flow
-
+```bash
+> Task :food-server:copyContracts - Copies contracts to the output folder
+> Task :food-server:generateClientStubs - Generate client stubs from the contracts (stubs/mappings/)
+> Task :food-server:verifierStubsJar - Creates the stubs JAR task
+> Task :food-server:generateContractTests - Generate server tests from the contracts
+> Task :food-server:test - Run all test case to verified server code and stubs
+```
+#### publish stub artifact to local maven repo
 ```
 ./gradlew publishStubsPublicationToMavenLocal
 ```
