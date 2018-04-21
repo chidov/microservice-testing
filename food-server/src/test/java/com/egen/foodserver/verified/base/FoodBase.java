@@ -8,31 +8,34 @@ import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Arrays;
 
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.mock;
 
 /**
  * @author cdov
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@WebMvcTest(FoodController.class)
 public class FoodBase {
 
     @Autowired
-    private FoodController foodController;
+    protected MockMvc mockMvc;
 
     @MockBean
-    private FoodRepository foodRepository;
+    protected FoodRepository foodRepository;
 
     @Before
     public void setup() {
         mockFoodRepositoryFindAll();
-        RestAssuredMockMvc.standaloneSetup(foodController);
+        RestAssuredMockMvc.mockMvc(mockMvc);
     }
 
     private void mockFoodRepositoryFindAll(){
