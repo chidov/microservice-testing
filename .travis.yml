@@ -6,5 +6,7 @@ before_script:
 script:
   - ./gradlew food-server:publishStubsPublicationToMavenLocal
   - ./gradlew clean build
+  - ./gradlew check
+  - ./gradlew codeCoverageReport
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash)  -t cf8fd6b1-f6a9-43a4-85f9-348fcb228385
