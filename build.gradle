@@ -5,6 +5,13 @@ allprojects {
     apply plugin: 'maven'
     apply plugin: 'jacoco'
 
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+
+        maven { url "http://repo1.maven.org/maven2/" }
+    }
 }
 
 subprojects {
