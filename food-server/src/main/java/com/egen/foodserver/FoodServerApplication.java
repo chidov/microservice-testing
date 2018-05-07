@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 public class FoodServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FoodServerApplication.class, args);
+		SpringApplication.run(FoodServerApplication.class, args); // $COVERAGE-IGNORE$
 	}
 
 	//init data

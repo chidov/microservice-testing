@@ -12,6 +12,10 @@ allprojects {
 
         maven { url "http://repo1.maven.org/maven2/" }
     }
+
+    jacoco {
+        toolVersion = "0.8.1"
+    }
 }
 
 subprojects {

@@ -13,6 +13,6 @@ public class FoodClientApplication {
 		return new RestTemplate();
 	}
 	public static void main(String[] args) {
-		SpringApplication.run(FoodClientApplication.class, args);
+		SpringApplication.run(FoodClientApplication.class, args); // $COVERAGE-IGNORE$
 	}
 }
