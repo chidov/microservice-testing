@@ -1,4 +1,4 @@
-# Microservice-Testing [![Build Status](https://travis-ci.com/Dovchiproeng/microservice-testing.svg?branch=master)](https://travis-ci.com/Dovchiproeng/microservice-testing)
+# Microservice-Testing [![Build Status](https://travis-ci.com/Dovchiproeng/microservice-testing.svg?branch=master)](https://travis-ci.com/Dovchiproeng/microservice-testing) [![codecov](https://codecov.io/gh/Dovchiproeng/microservice-testing/branch/master/graph/badge.svg)](https://codecov.io/gh/Dovchiproeng/microservice-testing)
 This project is a POC of Spring Cloud Contract which enables Consumer Driven Contract (CDC) development of JVM-based applications. It moves TDD to the level of software architecture.
 
 ## Consumer Driven Contract?
