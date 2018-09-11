@@ -1,2 +1,3 @@
 rootProject.name = 'microservice-testing'
-include 'food-server','food-client'
+include 'food-server'
+include 'food-client'
