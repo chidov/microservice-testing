@@ -10,8 +10,12 @@ jdk:
   - oraclejdk8
 before_script:
   - chmod +x gradlew
+addons:
+  sonarcloud:
+    organization: "dovchiproeng-github"
 script:
   - ./gradlew food-server:publishStubsPublicationToMavenLocal
   - ./gradlew clean build
+  - sonar-scanner
 after_success:
   - bash <(curl -s https://codecov.io/bash)  -t cf8fd6b1-f6a9-43a4-85f9-348fcb228385
