@@ -117,7 +117,10 @@ public class FoodClientTest {
     public void whenGetFoods_thenReturnFoods(){
         List<Food> foodList = foodClient.getFoods();
         assertThat(foodList).isNotEmpty();
-        assertThat(foodList.stream().filter(food -> food.getName().equals("Rice")).count()).isEqualTo(1);
+        assertThat(foodList).extracting("id", "name", "description").containsExactly(
+                new Tuple(1L, "Rice", "White Rice"),
+                new Tuple(2L, "Fried Rice", "Premium Rice")
+        );
     }
 }
 ```
