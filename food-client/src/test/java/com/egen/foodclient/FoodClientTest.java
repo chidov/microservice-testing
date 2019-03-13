@@ -1,6 +1,7 @@
 package com.egen.foodclient;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.assertj.core.groups.Tuple;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -45,6 +46,10 @@ public class FoodClientTest {
     public void whenGetFoods_thenReturnFoods(){
         List<Food> foodList = foodClient.getFoods();
         assertThat(foodList).isNotEmpty();
-        assertThat(foodList.stream().filter(food -> food.getName().equals("Rice")).count()).isEqualTo(1);
+        assertThat(foodList).filteredOn(food -> food.getName().equals("Rice")).hasSize(1);
+        assertThat(foodList).extracting("id", "name", "description").containsExactly(
+                new Tuple(1L, "Rice", "White Rice"),
+                new Tuple(2L, "Fried Rice", "Premium Rice")
+        );
     }
 }
