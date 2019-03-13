@@ -55,7 +55,7 @@ Base on the contract, Spring Cloud Contract Gradle and Maven plugins help you wi
 
 #### Advance contract DSL
 Contract DSL also support matcher and regex in order to match any request and response base on requirement:
-* [dynamic properties for consumer and producer](https://cloud.spring.io/spring-cloud-contract/multi/multi__contract_dsl.html#_dynamic_properties_inside_the_body)
+* [dynamic properties for consumer and producer](https://cloud.spring.io/spring-cloud-contract/multi/multi__contract_dsl.html#_dynamic_properties_inside_the_body), for example client side will always want to get response id = 1 but server testing can expect anynumber, then set can set resposne as `id: $(consumer(1),producer(anyNumber()))`
 * [regex and predefined-regex support](https://cloud.spring.io/spring-cloud-contract/multi/multi__contract_dsl.html#_regular_expressions)
 * [matcher support](https://cloud.spring.io/spring-cloud-contract/multi/multi__contract_dsl.html#contract-matchers)
 
