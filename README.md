@@ -53,6 +53,14 @@ Contract.make {
 ```
 Base on the contract, Spring Cloud Contract Gradle and Maven plugins help you with that by generating a jar with stubs and contract definitions with a stubs classifier(`food-server-0.0.1-SNAPSHOT-stubs.jar`). Just upload it to some central repository where others can reuse it for their integration tests.
 
+#### Advance contract DSL
+Contract DSL also support matcher and regex in order to match any request and response base on requirement:
+* [dynamic properties for consumer and producer](https://cloud.spring.io/spring-cloud-contract/multi/multi__contract_dsl.html#_dynamic_properties_inside_the_body)
+* [regex and predefined-regex support](https://cloud.spring.io/spring-cloud-contract/multi/multi__contract_dsl.html#_regular_expressions)
+* [matcher support](https://cloud.spring.io/spring-cloud-contract/multi/multi__contract_dsl.html#contract-matchers)
+
+[more detail about contract DSL](https://cloud.spring.io/spring-cloud-contract/multi/multi__contract_dsl.html#_contract_dsl)
+
 ### Verified with Server Side Concrete Implementation (Producer Perspective Testing)
 Since you are developing your stub, you need to be sure that it actually resembles your concrete implementation. You cannot have a situation where your stub acts in one way and your application behaves in a different way, especially in production.
 
