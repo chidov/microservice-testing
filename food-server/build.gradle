@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springCloudContractVersion = '1.2.4.RELEASE'
+		springCloudContractVersion = '2.1.1.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -33,6 +33,7 @@ contracts {
 //    Package Base with Convention ( (src/test/resources/contracts/**)last at most 2 package name + Suffix 'Base', in our case will be FoodBase)
     packageWithBaseClasses = 'com.egen.foodserver.verified.base'
 	basePackageForTests = 'com.egen.foodserver.verifier.tests'
+	convertToYaml = true
 }
 
 test {
