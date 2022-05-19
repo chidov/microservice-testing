@@ -49,3 +49,8 @@ jobs:
             ./gradlew :food-server:publishMavenJavaPublicationToMavenLocal
             ./gradlew clean build
       - sonarcloud/scan
+workflows:
+  my-workflow:
+    jobs:
+      - build:
+          context: sonarcloud
