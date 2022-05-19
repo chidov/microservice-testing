@@ -1,10 +1,8 @@
-group = 'com.egen'
-version = '0.0.1-SNAPSHOT'
-
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-web')
+	implementation("org.springframework.boot:spring-boot-starter-web")
 	compileOnly('org.projectlombok:lombok')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
-	testCompile('org.springframework.cloud:spring-cloud-starter-contract-stub-runner')
+	annotationProcessor('org.projectlombok:lombok')
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.springframework.cloud:spring-cloud-starter-contract-stub-runner")
 }
 

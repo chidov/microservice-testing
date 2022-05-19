@@ -1,7 +1,8 @@
 package com.egen.foodserver;
 
 import com.egen.foodserver.verified.base.FoodBase;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -20,7 +21,7 @@ public class FoodControllerTest extends FoodBase {
         this.mockMvc
                 .perform(get("/foods"))
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("@.[0].name").value("Rice"));
     }
 }

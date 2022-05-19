@@ -1,4 +1,4 @@
-package food
+package contracts.food
 
 import org.springframework.cloud.contract.spec.Contract
 
@@ -25,7 +25,7 @@ Contract.make {
 ]
         """)
         headers {
-            header('Content-Type', 'application/json;charset=UTF-8')
+            header('Content-Type', 'application/json')
         }
     }
 }

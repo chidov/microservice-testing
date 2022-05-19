@@ -1,29 +1,20 @@
-buildscript {
-	ext {
-		springCloudContractVersion = '2.1.1.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath "org.springframework.cloud:spring-cloud-contract-gradle-plugin:${springCloudContractVersion}"
+plugins {
+	id "org.springframework.cloud.contract" version "3.1.2"
+	id 'maven-publish'
+}
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
 }
-
-apply plugin: 'spring-cloud-contract'
-apply plugin: 'maven-publish'
-
-group = 'com.egen'
-version = '0.0.1-SNAPSHOT'
-
-
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	runtime('com.h2database:h2')
+	implementation('org.springframework.boot:spring-boot-starter-web')
+	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+	runtimeOnly('com.h2database:h2')
 	compileOnly('org.projectlombok:lombok')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
-	testCompile('org.springframework.cloud:spring-cloud-starter-contract-verifier')
+	annotationProcessor('org.projectlombok:lombok')
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	testImplementation('org.springframework.cloud:spring-cloud-starter-contract-verifier')
 }
 
 
@@ -31,13 +22,18 @@ contracts {
 //    Class Base
 //    baseClassForTests = 'com.egen.foodserver.verified.base.FoodBase'
 //    Package Base with Convention ( (src/test/resources/contracts/**)last at most 2 package name + Suffix 'Base', in our case will be FoodBase)
-    packageWithBaseClasses = 'com.egen.foodserver.verified.base'
-	basePackageForTests = 'com.egen.foodserver.verifier.tests'
-	convertToYaml = true
+	testFramework = "JUNIT5"
+	contractsDslDir = layout.getProjectDirectory().dir("food-server/src/contractTest/resources/contracts")
+	packageWithBaseClasses = 'com.egen.foodserver.verified.base'
+	basePackageForTests = 'com.egen.foodserver.verifier.contractTests'
 }
 
-test {
-	exclude 'com/egen/foodserver/verified/**'
+contractTest {
+	useJUnitPlatform()
+	testLogging {
+		events = ["SKIPPED", "FAILED", "PASSED"]
+		exceptionFormat = 'full'
+	}
 }
 
 publishing {
@@ -52,7 +48,19 @@ publishing {
 //	}
 	publications {
 		mavenJava(MavenPublication) {
-			from components.java
+			artifact bootJar
+
+			artifact verifierStubsJar
+
+			// https://github.com/spring-gradle-plugins/dependency-management-plugin/issues/273
+			versionMapping {
+				usage("java-api") {
+					fromResolutionOf("runtimeClasspath")
+				}
+				usage("java-runtime") {
+					fromResolutionResult()
+				}
+			}
 		}
 	}
 }

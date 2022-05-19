@@ -1,42 +1,57 @@
-buildscript {
-    ext {
-        springBootVersion = '2.1.3.RELEASE'
-        springCloudVersion = 'Greenwich.RELEASE'
-    }
-
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    }
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'idea'
+    id 'org.springframework.boot' version '2.6.3' apply false
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE' apply false
+}
+ext {
+    set('springCloudVersion', "2021.0.2")
 }
 allprojects {
+    apply plugin: "java"
+    apply plugin: "jacoco"
+    apply plugin: "idea"
+
     group = 'com.egen'
-
-    apply plugin: 'java'
-    apply plugin: 'jacoco'
-
     repositories {
         mavenLocal()
         mavenCentral()
-        jcenter()
     }
     jacoco {
-        toolVersion = "0.8.1"
+        toolVersion = "0.8.6"
+    }
+    jacocoTestReport {
+        dependsOn test // tests are required to run before generating the report
+
+        subprojects.each {
+            sourceSets it.sourceSets.main
+        }
+
+        reports {
+            xml.enabled(true)
+            xml.outputLocation = layout.buildDirectory.file("reports/jacoco/report.xml")
+            html.enabled(true)
+            csv.enabled(false)
+        }
     }
 
+    test {
+        useJUnitPlatform()
+        testLogging {
+            events = ["SKIPPED", "FAILED", "PASSED"]
+            exceptionFormat = "full"
+            displayGranularity = 1
+            showStandardStreams = false
+        }
 
+        finalizedBy jacocoTestReport
+    }
 }
 
 subprojects {
-    apply plugin: 'java'
-    apply plugin: 'maven'
-    apply plugin: 'idea'
-    apply plugin: 'eclipse'
-    apply plugin: 'org.springframework.boot'
-    apply plugin: 'io.spring.dependency-management'
-
+    apply plugin: "org.springframework.boot"
+    apply plugin: "io.spring.dependency-management"
 
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
@@ -47,24 +62,3 @@ subprojects {
         }
     }
 }
-
-task codeCoverageReport(type: JacocoReport) {
-    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
-
-    subprojects.each {
-        sourceSets it.sourceSets.main
-    }
-
-    reports {
-        xml.enabled true
-        xml.destination "${buildDir}/reports/jacoco/report.xml"
-        html.enabled true
-        csv.enabled false
-    }
-}
-
-codeCoverageReport.dependsOn {
-    subprojects*.test
-}
-
-check.dependsOn codeCoverageReport

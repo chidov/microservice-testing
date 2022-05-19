@@ -1,28 +1,27 @@
 package com.egen.foodserver.verified.base;
 
-import com.egen.foodserver.Food;
-import com.egen.foodserver.FoodController;
-import com.egen.foodserver.FoodRepository;
-import io.restassured.module.mockmvc.RestAssuredMockMvc;
-import org.junit.Before;
-import org.junit.runner.RunWith;
-import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.servlet.MockMvc;
+import static org.mockito.BDDMockito.given;
 
 import java.util.Arrays;
 
-import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.mock;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.web.servlet.MockMvc;
+
+import com.egen.foodserver.Food;
+import com.egen.foodserver.FoodController;
+import com.egen.foodserver.FoodRepository;
+
+import io.restassured.module.mockmvc.RestAssuredMockMvc;
 
 /**
  * @author cdov
  */
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @WebMvcTest(FoodController.class)
 public class FoodBase {
 
@@ -32,8 +31,8 @@ public class FoodBase {
     @MockBean
     protected FoodRepository foodRepository;
 
-    @Before
-    public void setup() {
+    @BeforeEach
+    void setup() {
         mockFoodRepositoryFindAll();
         RestAssuredMockMvc.mockMvc(mockMvc);
     }
