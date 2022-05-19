@@ -1,7 +1,8 @@
 # Java Gradle CircleCI 2.0 configuration file
 # See: https://circleci.com/docs/2.0/language-java/
-version: 2
-
+version: 2.1
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.3
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
@@ -47,3 +48,9 @@ jobs:
           command: |
             ./gradlew :food-server:publishMavenJavaPublicationToMavenLocal
             ./gradlew clean build
+      - sonarcloud/scan
+workflows:
+  my-workflow:
+    jobs:
+      - build:
+          context: sonarcloud
