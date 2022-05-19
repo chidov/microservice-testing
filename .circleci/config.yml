@@ -45,5 +45,5 @@ jobs:
       # run tests!
       - run: 
           command: |
-            ./gradlew food-server:publishStubsPublicationToMavenLocal
+            ./gradlew :food-server:publishMavenJavaPublicationToMavenLocal
             ./gradlew clean build
